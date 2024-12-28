@@ -17,4 +17,8 @@ for i, doc in enumerate(dataset):
 # 모델 학습
 model_text8 = Word2Vec(dataset, vector_size = 100, window=5, min_count=150, workers=4)
 
-# 학습 모델 활용 예시
+# 모델 저장
+model_file_path = "word2vec_text8.model"
+model_text8.save(model_file_path)
+print(f"모델이 '{model_file_path}'로 저장되었습니다.")
+
